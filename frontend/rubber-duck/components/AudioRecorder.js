@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useButton } from '@react-aria/button';
 import Button from './Button'
 
-const API_ENDPOINT = "http://127.0.0.1:8000/api/critique";
+const API_ENDPOINT = "https://rubberduck-ai-backend.onrender.com/api/critique";
 function AudioRecorder() {
   const [recording, setRecording] = useState(false);
   const [audioUrl, setAudioUrl] = useState(null);
