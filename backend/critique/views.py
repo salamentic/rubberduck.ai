@@ -23,6 +23,7 @@ from langchain.schema import (
     SystemMessage
 )
 
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 def chatgpt_questioning(agent, transcription):
 
@@ -42,8 +43,7 @@ def chatgpt_questioning(agent, transcription):
 @csrf_exempt
 @api_view(['POST'])
 def critique(request):
-    api_key = "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"
-    game_agent = ChatOpenAI(temperature=0, openai_api_key=api_key, max_tokens=214) # Agent that will reason over current game
+    game_agent = ChatOpenAI(temperature=0, max_tokens=214) # Agent that will reason over current game
 
     print("request.FILES keys:", request.FILES.keys())  # Add this line to print the keys in request.FILES
     audio_file = request.FILES.get('audio')
