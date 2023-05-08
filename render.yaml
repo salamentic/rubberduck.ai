@@ -1,5 +1,6 @@
 services:
   - type: web
     name: idea_critique_backend
+    env: python
     buildCommand: "cd backend; ./build.sh"
     startCommand: "cd backend; gunicorn idea_critique_backend.wsgi:application"
