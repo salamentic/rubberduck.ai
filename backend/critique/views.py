@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 import requests
+import openai
 import numpy as np
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
