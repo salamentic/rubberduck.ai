@@ -1,8 +1,0 @@
-databases:
-  - name: rubberduckai
-
-services:
-  - type: web
-    name: rubberduckai
-    buildCommand: "./build.sh"
-    startCommand: "gunicorn rubberduckai.wsgi:application"

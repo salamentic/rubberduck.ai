@@ -1,8 +1,5 @@
-databases:
-  - name: rubberduckai
-
 services:
   - type: web
     name: rubberduckai
     buildCommand: "./backend/build.sh"
-    startCommand: "gunicorn rubberduckai.wsgi:application"
+    startCommand: "cd backend; gunicorn rubberduckai.wsgi:application"
