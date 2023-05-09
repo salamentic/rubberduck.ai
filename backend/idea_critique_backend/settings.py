@@ -123,11 +123,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ORIGIN_ALLOW_ALL = True
 
 INSTALLED_APPS += [
     'corsheaders',
 ]
 
 ALLOWED_HOSTS = ['idea-critique-backend.onrender.com', 'localhost', '127.0.0.1']
+MIDDLEWARE.insert(0, 'django.middleware.common.CommonMiddleware')
 MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
+CORS_ORIGIN_ALLOW_ALL = True
