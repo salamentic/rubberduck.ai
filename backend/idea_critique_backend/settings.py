@@ -128,7 +128,7 @@ INSTALLED_APPS += [
     'corsheaders',
 ]
 
-ALLOWED_HOSTS = ['idea-critique-backend.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['idea-critique-backend.onrender.com', 'localhost', '127.0.0.1', 'rubberduckai-production.up.railway.app']
 MIDDLEWARE.insert(0, 'django.middleware.common.CommonMiddleware')
 MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
 CORS_ORIGIN_ALLOW_ALL = True
