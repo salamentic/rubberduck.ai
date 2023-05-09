@@ -129,4 +129,5 @@ INSTALLED_APPS += [
     'corsheaders',
 ]
 
+ALLOWED_HOSTS = ['idea-critique-backend.onrender.com', 'localhost', '127.0.0.1']
 MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
