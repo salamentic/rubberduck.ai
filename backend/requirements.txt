@@ -57,7 +57,7 @@ SQLAlchemy==2.0.10
 sqlparse==0.4.4
 sympy==1.11.1
 tenacity==8.2.2
-tiktoken==0.3.3
+tiktoken
 torch==2.0.0
 tqdm==4.65.0
 triton==2.0.0
