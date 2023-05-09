@@ -52,14 +52,9 @@ def critique(request):
     response_data = {}
     if audio_file:
         model = whisper.load_model("base")
-        temp = '/tmp/audio2.ogg'
-        #ogg_bytes = b'OggS\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
-        with open(temp, 'wb') as f:
-            #f.write(ogg_bytes)
-            f.write(audio_file.file.read())
-            print()
         audio_file = np.frombuffer(audio_file.file.read(), np.int16).astype(np.float32) / 32768.0
         transcript = model.transcribe(audio_file)
+        print(transcript)
         out = chatgpt_questioning(game_agent, transcript)
         response_data['data1'] = out[0].content
         response_data['data2'] = out[1].content
